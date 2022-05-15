@@ -1,2 +1,6 @@
 - name: Supported PHP Versions
   uses: WyriHaximus/github-action-supported-php-versions@v1.7.0
+
+
+- name: SonarCloud Scan PR fix
+  uses: kundkingan/sonarcloud-github-action@1.5
