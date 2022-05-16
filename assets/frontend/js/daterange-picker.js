@@ -273,7 +273,7 @@
             var start = Date.parseExact(dateString[0], this.format);
             var end = Date.parseExact(dateString[1], this.format);
 
-            if (start == null || end == null) return;
+            if (start === null || end === null) return;
             if (end.isBefore(start)) return;
 
             this.startDate = start;
