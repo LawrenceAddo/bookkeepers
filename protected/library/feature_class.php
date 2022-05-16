@@ -1,7 +1,5 @@
 <?php
 class feature {
-	private $address = null;
-	private	$encryptkey = 'SHIFTCRYPT';
 	/**
 	 *
 	 * @param
