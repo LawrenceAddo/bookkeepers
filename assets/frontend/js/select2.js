@@ -1589,7 +1589,7 @@ the specific language governing permissions and limitations under the Apache Lic
 
             // give the tokenizer a chance to pre-process the input
             input = this.tokenize();
-            if (input != undefined && input != null) {
+            if (input != undefined && input !== null) {
                 search.val(input);
             }
 
@@ -2716,7 +2716,7 @@ the specific language governing permissions and limitations under the Apache Lic
         tokenize: function() {
             var input = this.search.val();
             input = this.opts.tokenizer.call(this, input, this.data(), this.bind(this.onSelect), this.opts);
-            if (input != null && input != undefined) {
+            if (input !== null && input != undefined) {
                 this.search.val(input);
                 if (input.length > 0) {
                     this.open();

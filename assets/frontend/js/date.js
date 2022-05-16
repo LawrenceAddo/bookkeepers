@@ -887,7 +887,7 @@ Date.CultureInfo = {
             return function(s) {
                 var r = null;
                 for (var i = 0; i < px.length; i++) {
-                    if (px[i] == null) {
+                    if (px[i] === null) {
                         continue;
                     }
                     try {
@@ -908,7 +908,7 @@ Date.CultureInfo = {
                 var rx = [],
                     r = null;
                 for (var i = 0; i < px.length; i++) {
-                    if (px[i] == null) {
+                    if (px[i] === null) {
                         continue;
                     }
                     try {
@@ -1303,7 +1303,7 @@ Date.CultureInfo = {
                 this.value = (this.month + 1);
                 this.month = null;
             }
-            if (this.value != null && this.month != null && this.year != null) {
+            if (this.value !== null && this.month !== null && this.year !== null) {
                 this.day = this.value * 1;
             }
             if (this.month && !this.day && this.value) {
@@ -1330,7 +1330,7 @@ Date.CultureInfo = {
             }
             if (!this.value && this.operator && this.operator !== null && this[this.unit + "s"] && this[this.unit + "s"] !== null) {
                 this[this.unit + "s"] = this[this.unit + "s"] + ((this.operator == "add") ? 1 : -1) + (this.value || 0) * orient;
-            } else if (this[this.unit + "s"] == null || this.operator != null) {
+            } else if (this[this.unit + "s"] === null || this.operator !== null) {
                 if (!this.value) {
                     this.value = 1;
                 }
