@@ -182,7 +182,7 @@
       case 'DD':
       case 'DDD':
       case 'DDDD':
-        t != null && (s[2] = ~~t)
+        t !== null && (s[2] = ~~t)
         break
       case 'YY':
         s[0] = ~~t + (~~t > 68 ? 1900 : 2e3)
@@ -225,7 +225,7 @@
         r && r[2] && (n._tzm = ~~r[2]),
         r && r[0] === '+' && ((n._tzh = -n._tzh), (n._tzm = -n._tzm))
     }
-    t == null && (n._isValid = !1)
+    t === null && (n._isValid = !1)
   }
   function J (e) {
     let t
@@ -694,7 +694,7 @@
         },
         isValid: function () {
           return (
-            this._isValid == null &&
+            this._isValid === null &&
               (this._a
                 ? (this._isValid = !q(
                     this._a,
