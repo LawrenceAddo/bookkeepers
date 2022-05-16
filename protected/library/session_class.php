@@ -64,17 +64,6 @@ class session extends links {
 		}
 		return hash ( "sha512", $fingerprint . SITE_URL );
 	}
-
-	// Internal function. Regenerates session ID if possible.
-	private function _RegenerateId() {
-		if ($this->regenerate_id && function_exists ( 'session_regenerate_id' )) {
-			if (version_compare ( phpversion (), '5.1.0', '>=' )) {
-				//session_regenerate_id ( true );
-			} else {
-				//session_regenerate_id ();
-			}
-		}
-	}
 	public function destroy($page, $panel = NULL) {
 		session_unset ();
 		session_destroy ();
