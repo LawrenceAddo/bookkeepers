@@ -4,3 +4,9 @@
  ###SonarCloud Scan PR fix
 - name: SonarCloud Scan PR fix
   uses: kundkingan/sonarcloud-github-action@1.5
+  
+###Composer PHP versions in range
+
+  - name: Composer PHP versions in range
+  uses: WyriHaximus/github-action-composer-php-versions-in-range@v1
+
