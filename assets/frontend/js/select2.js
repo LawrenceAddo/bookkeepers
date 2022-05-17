@@ -510,7 +510,7 @@ the specific language governing permissions and limitations under the Apache Lic
                 if (datum.children) {
                     group = {};
                     for (attr in datum) {
-                        if (datum.hasOwnProperty(attr)) group[attr]=datum[attr];
+                        if (Object.prototype.hasOwnProperty.call(datum, attr)) group[attr]=datum[attr];
                     }
                     group.children=[];
                     $(datum.children).each2(function(i, childDatum) { process(childDatum, group.children); });
